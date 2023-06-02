@@ -20,12 +20,12 @@ git clone https://github.com/Fernando-LRz/myTasks-backend.git
 ```bash
 cd myTasks-backend
 ```
-3. Install everything needed to run the app
+3. Install everything the backend needs
 ```bash
 npm install
 ```
 
 ## Run the backend
 ```bash
-npm run start
+npm run dev
 ```
