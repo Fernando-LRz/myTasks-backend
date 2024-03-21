@@ -1,4 +1,4 @@
-# myTasks-backend
+# MyTasks: backend
 Backend of a to-do list web app built with the MERN stack.
 
 ## Features
