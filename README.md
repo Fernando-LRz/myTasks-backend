@@ -2,14 +2,10 @@
 Backend of a to-do list web app built with the MERN stack.
 
 ## Features
- * Create account
- * Reset password
- * Login
- * Create, edit and delete tasks
- * Mark and unmark tasks as favorites
- * Change account information
- * Change password
- * Delete account
+* User registration.
+* Password reset.
+* Task creation, editing, and deletion.
+* Ability to add and remove tasks from favorites.
  
 ## Installation
 1. Clone the repository
