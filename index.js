@@ -1,9 +1,9 @@
-import express from "express";
-import dotenv from "dotenv";
-import cors from "cors";
-import connectToDB from "./config/db.js";
-import userRouter from "./routes/userRoutes.js";
-import taskRouter from "./routes/taskRoutes.js";
+import express from 'express';
+import dotenv from 'dotenv';
+import cors from 'cors';
+import connectToDB from './config/db.js';
+import userRouter from './routes/userRoutes.js';
+import taskRouter from './routes/taskRoutes.js';
 
 const app = express();
 

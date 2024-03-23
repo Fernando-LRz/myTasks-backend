@@ -1,6 +1,6 @@
-import mongoose from "mongoose";
-import bcrypt from "bcrypt";
-import generateToken from "../helpers/generateToken.js";
+import mongoose from 'mongoose';
+import bcrypt from 'bcrypt';
+import generateToken from '../helpers/generateToken.js';
 
 // Crear el esquema para los usuarios
 const userSchema = mongoose.Schema({
@@ -33,7 +33,6 @@ const userSchema = mongoose.Schema({
         default: false
     }
 });
-
 
 userSchema.pre('save', async function (next) {
     // Verificar que el password no haya sido hasheado previamente

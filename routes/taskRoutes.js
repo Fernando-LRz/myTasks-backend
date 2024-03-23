@@ -1,6 +1,13 @@
-import express from "express";
-import verifyAuth from "../middleware/authMiddleware.js"
-import { addTask, getTasks, getTask, updateTask, setFavorite, deleteTask } from "../controllers/taskController.js";
+import express from 'express';
+import verifyAuth from '../middleware/authMiddleware.js'
+import { 
+    addTask, 
+    getTasks, 
+    getTask, 
+    updateTask, 
+    setFavorite, 
+    deleteTask 
+} from '../controllers/taskController.js';
 
 // Acceder al router de express
 const router = express.Router();

@@ -1,9 +1,9 @@
-import User from "../models/User.js";
-import Task from "../models/Task.js";
-import generateJWT from "../helpers/generateJWT.js";
-import generateToken from "../helpers/generateToken.js";
-import confirmationEmail from "../helpers/confirmationEmail.js";
-import passwordResetEmail from "../helpers/passwordResetEmail.js";
+import User from '../models/User.js';
+import Task from '../models/Task.js';
+import generateJWT from '../helpers/generateJWT.js';
+import generateToken from '../helpers/generateToken.js';
+import confirmationEmail from '../helpers/confirmationEmail.js';
+import passwordResetEmail from '../helpers/passwordResetEmail.js';
 
 const signUp = async (req, res) => {
     const { name, lastname, email } = req.body;
@@ -12,7 +12,7 @@ const signUp = async (req, res) => {
     const user = await User.findOne({ email });
 
     if(user) {
-        const error = new Error('El usuario ya está registrado');
+        const error = new Error('El correo electrónico ya está registrado');
         return res.status(400).json({ msg: error.message });
     }
 
@@ -53,7 +53,7 @@ const confirmEmail = async (req, res) => {
         await user.save();
 
         // Retornar un mensaje de éxito
-        res.json({ msg: "Cuenta confirmada correctamente" });
+        res.json({ msg: 'Cuenta confirmada correctamente' });
 
     } catch (error) {
         console.log('Error: ', error);
@@ -125,7 +125,7 @@ const forgotPassword = async (req, res) => {
         });
 
         // Retornar un mensaje de éxito
-        res.json({ msg: "Hemos enviado un email con las instrucciones" });
+        res.json({ msg: 'Hemos enviado un email con las instrucciones' });
         
     } catch (error) {
         console.log('Error: ', error);
@@ -140,7 +140,7 @@ const verifyToken = async (req, res) => {
 
     if(user) {
         // Retornar un mensaje de éxito
-        res.json({ msg: "Token válido" })
+        res.json({ msg: 'Token válido' })
 
     } else {
         // Retornar un mensaje de error
@@ -168,7 +168,7 @@ const resetPassword = async (req, res) => {
         await user.save();
 
         // Retornar un mensaje de éxito
-        res.json({ msg: "Contraseña modificada correctamente" });
+        res.json({ msg: 'Contraseña modificada correctamente' });
 
     } catch (error) {
         console.log('Error: ', error);
@@ -249,7 +249,7 @@ const deleteAccount = async (req, res) => {
     const user = await User.findById(id);
 
     if(!user) {
-        return res.status(404).json({ msg: "Usuario no encontrado" });
+        return res.status(404).json({ msg: 'Usuario no encontrado' });
     }
 
     try {
@@ -260,7 +260,7 @@ const deleteAccount = async (req, res) => {
         await user.deleteOne();
 
         // Retornar una respuesta de éxito
-        res.json({ msg: "Cuenta Eliminada" });
+        res.json({ msg: 'Cuenta Eliminada' });
 
     } catch (error) {
         console.log('Error: ', error);
@@ -268,6 +268,14 @@ const deleteAccount = async (req, res) => {
 };
 
 export {
-    signUp, logIn, confirmEmail, account, forgotPassword, verifyToken, resetPassword, updateAccount, changePassword, deleteAccount
+    signUp, 
+    logIn, 
+    confirmEmail, 
+    account, 
+    forgotPassword, 
+    verifyToken, 
+    resetPassword, 
+    updateAccount, 
+    changePassword, 
+    deleteAccount
 }
-

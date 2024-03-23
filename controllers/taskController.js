@@ -1,4 +1,4 @@
-import Task from "../models/Task.js";
+import Task from '../models/Task.js';
 
 const addTask = async (req, res) => {
     // Crear la tarea y asociarla a su creador
@@ -32,12 +32,12 @@ const getTask = async (req, res) => {
     const task = await Task.findById(id);
 
     if(!task) {
-        return res.status(404).json({ msg: "Tarea no encontrada" });
+        return res.status(404).json({ msg: 'Tarea no encontrada' });
     }
     
     // Verificar que la tarea pertenezca al usuario
     if(task.user._id.toString() !== req.user._id.toString()) {
-        return res.json({ msg: "Acción no permitida" });
+        return res.json({ msg: 'Acción no permitida' });
     }
 
     // Retornar como respuesta la tarea solicitada
@@ -51,12 +51,12 @@ const updateTask = async (req, res) => {
     const task = await Task.findById(id);
 
     if(!task) {
-        return res.status(404).json({ msg: "Tarea no encontrada" });
+        return res.status(404).json({ msg: 'Tarea no encontrada' });
     }
     
     // Verificar que la tarea pertenezca al usuario
     if(task.user._id.toString() !== req.user._id.toString()) {
-        return res.json({ msg: "Acción no permitida" });
+        return res.json({ msg: 'Acción no permitida' });
     }
 
     // Actualizar la tarea
@@ -81,12 +81,12 @@ const setFavorite = async (req, res) => {
     const task = await Task.findById(id);
 
     if(!task) {
-        return res.status(404).json({ msg: "Tarea no encontrada" });
+        return res.status(404).json({ msg: 'Tarea no encontrada' });
     }
     
     // Verificar que la tarea pertenezca al usuario
     if(task.user._id.toString() !== req.user._id.toString()) {
-        return res.json({ msg: "Acción no permitida" });
+        return res.json({ msg: 'Acción no permitida' });
     }
 
     // Actualizar la tarea
@@ -108,12 +108,12 @@ const deleteTask = async (req, res) => {
     const task = await Task.findById(id);
 
     if(!task) {
-        return res.status(404).json({ msg: "Tarea no encontrada" });
+        return res.status(404).json({ msg: 'Tarea no encontrada' });
     }
     
     // Verificar que la tarea pertenezca al usuario
     if(task.user._id.toString() !== req.user._id.toString()) {
-        return res.json({ msg: "Acción no permitida" });
+        return res.json({ msg: 'Acción no permitida' });
     }
 
     try {
@@ -121,7 +121,7 @@ const deleteTask = async (req, res) => {
         await task.deleteOne();
 
         // Retornar una respuesta de éxito
-        res.json({ msg: "Tarea eliminada" });
+        res.json({ msg: 'Tarea eliminada' });
 
     } catch (error) {
         console.log('Error: ', error);

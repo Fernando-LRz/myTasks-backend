@@ -1,4 +1,4 @@
-import nodemailer from "nodemailer";
+import nodemailer from 'nodemailer';
 
 const passwordResetEmail = async (data) => {
     const transporter = nodemailer.createTransport({
@@ -27,7 +27,7 @@ const passwordResetEmail = async (data) => {
       `
     });
 
-    console.log("E-mail envíado: %s", info.messageId);
+    console.log('E-mail envíado: %s', info.messageId);
 };
 
 export default passwordResetEmail;

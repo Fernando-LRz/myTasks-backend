@@ -1,6 +1,18 @@
-import express from "express";
-import { signUp, logIn, confirmEmail, account, forgotPassword, verifyToken, resetPassword, updateAccount, changePassword, deleteAccount } from "../controllers/userController.js";
-import verifyAuth from "../middleware/authMiddleware.js";
+import express from 'express';
+import { 
+    signUp, 
+    logIn, 
+    confirmEmail, 
+    account, 
+    forgotPassword, 
+    verifyToken, 
+    resetPassword,
+    updateAccount, 
+    changePassword, 
+    deleteAccount 
+} from '../controllers/userController.js';
+
+import verifyAuth from '../middleware/authMiddleware.js';
 
 // Acceder al touter de express
 const router = express.Router();
