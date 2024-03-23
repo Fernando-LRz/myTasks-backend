@@ -29,20 +29,20 @@ npm run dev
 ## Images
 | Tasks                                                            |
 | ---------------------------------------------------------------- |
-| <img src="images/tasks.png" width="950" height="500"/>           |
+| <img src="images/tasks.png" width="950" height="450"/>           |
 
 | Favorite tasks                                                   |
 | ---------------------------------------------------------------- |
-| <img src="images/favorite-tasks.png" width="950" height="500"/>  |
+| <img src="images/favorite-tasks.png" width="950" height="450"/>  |
 
 | Change password                                                  |
 | ---------------------------------------------------------------- |
-| <img src="images/change-password.png" width="950" height="500"/> |
+| <img src="images/change-password.png" width="950" height="450"/> |
 
 | Update account info                                              |
 | ---------------------------------------------------------------- |
-| <img src="images/update-account.png" width="950" height="500"/>  |
+| <img src="images/update-account.png" width="950" height="450"/>  |
 
 | Delete account                                                   |
 | ---------------------------------------------------------------- |
-| <img src="images/delete-account.png" width="950" height="500"/>  |
+| <img src="images/delete-account.png" width="950" height="450"/>  |
